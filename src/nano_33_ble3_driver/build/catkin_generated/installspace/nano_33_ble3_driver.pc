@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: nano_33_ble3_driver
+Description: Description of nano_33_ble3_driver
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

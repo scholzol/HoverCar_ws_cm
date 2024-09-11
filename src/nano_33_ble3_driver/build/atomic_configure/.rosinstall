@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/olaf/catkin_ws/src/nano_33_ble3_driver/build/devel/setup.sh

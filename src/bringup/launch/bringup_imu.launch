@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- A simple launch file to bringup the raspi of the HoverCar. -->
+
+  <!-- launch the Arduino BLE33. -->
+
+	<node pkg="rosserial_python" type="serial_node.py" name="rosserial_imu" output="screen">
+	  <param name="port" value="/dev/ttyIMU" />
+	  <param name="baud" value="115200" />
+	</node>
+
+</launch>

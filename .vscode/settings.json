@@ -1,0 +1,12 @@
+{
+    "cmake.sourceDirectory": "/home/ubuntu/HoverCar_ws_cm/src",
+    "files.associations": {
+        "cmath": "cpp"
+    },
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc-9",
+    "python.autoComplete.extraPaths": [
+        "/home/ubuntu/HoverCar_ws_cm/devel/lib/python3/dist-packages",
+        "/home/ubuntu/HoverCar_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

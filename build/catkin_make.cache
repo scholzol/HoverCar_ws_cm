@@ -1,0 +1,2 @@
+hovercar_odom:nmea_navsat_driver:ydlidar_ros_driver
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/HoverCar_ws_cm/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/HoverCar_ws_cm/install -G Unix Makefiles

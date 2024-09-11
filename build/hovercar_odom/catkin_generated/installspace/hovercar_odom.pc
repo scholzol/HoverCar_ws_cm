@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/HoverCar_ws_cm/install
+
+Name: hovercar_odom
+Description: Description of hovercar_odom
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,16 @@
+
+<launch>
+  <arg name="model" default="$(find robocar_description)/urdf/robocar.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+	<?ignore
+	?>
+	<node pkg="rosserial_python" type="serial_node.py" name="rosserial" output="screen">
+	  <param name="port" value="/dev/ttyBLE33" />
+	  <param name="baud" value="115200" />
+	</node>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+	<?ignore
+	?>
+	<node pkg="rviz" type="rviz" name="rviz" args="-f base_link -d /home/olaf/catkin_ws/src/nano_33_ble3_driver/rviz/nano_BLE_33.rviz"/>
+</launch>

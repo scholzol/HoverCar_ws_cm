@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/olaf/catkin_ws/devel/include/**",
+                "/opt/ros/noetic/include/**",
+                "/home/olaf/catkin_ws/src/lsm9ds1_driver/include/**",
+                "/home/olaf/catkin_ws/src/nano_33_ble3_driver/include/**",
+                "/home/olaf/catkin_ws/src/rf2o_laser_odometry/include/**",
+                "/home/olaf/catkin_ws/src/velodyne/velodyne_driver/include/**",
+                "/home/olaf/catkin_ws/src/velodyne/velodyne_laserscan/include/**",
+                "/home/olaf/catkin_ws/src/velodyne/velodyne_pcl/include/**",
+                "/home/olaf/catkin_ws/src/velodyne/velodyne_pointcloud/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

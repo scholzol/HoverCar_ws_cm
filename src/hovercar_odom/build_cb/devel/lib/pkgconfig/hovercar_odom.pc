@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/HoverCar_ws_cm/src/hovercar_odom/build_cb/devel
+
+Name: hovercar_odom
+Description: Description of hovercar_odom
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

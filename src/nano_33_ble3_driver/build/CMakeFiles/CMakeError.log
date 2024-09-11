@@ -1,0 +1,48 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/olaf/catkin_ws/src/nano_33_ble3_driver/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_5087b && [1/2] Building C object CMakeFiles/cmTC_5087b.dir/src.c.o
+[2/2] Linking C executable cmTC_5087b
+FAILED: cmTC_5087b 
+: && /usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD  -rdynamic CMakeFiles/cmTC_5087b.dir/src.c.o  -o cmTC_5087b   && :
+/usr/bin/ld: CMakeFiles/cmTC_5087b.dir/src.c.o: in function `main':
+src.c:(.text+0x35): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x41): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x53): undefined reference to `pthread_join'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/olaf/catkin_ws/src/nano_33_ble3_driver/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_dc9a0 && [1/2] Building C object CMakeFiles/cmTC_dc9a0.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_dc9a0
+FAILED: cmTC_dc9a0 
+: && /usr/bin/clang -DCHECK_FUNCTION_EXISTS=pthread_create  -rdynamic CMakeFiles/cmTC_dc9a0.dir/CheckFunctionExists.c.o  -o cmTC_dc9a0  -lpthreads && :
+/usr/bin/ld: -lpthreads kann nicht gefunden werden
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+

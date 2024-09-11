@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ubuntu/HoverCar_ws_cm/src/hovercar_odom/build_cb/devel/setup.sh
